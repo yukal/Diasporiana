@@ -1,0 +1,141 @@
+nav.navbar.genres {
+  padding: 0;
+  flex-basis: 100%;
+
+  @include media-breakpoint-up(lg) {
+    float: left;
+    padding-right: 15px;
+    //padding-left: 15px;
+    width: 25%;
+  }
+
+  a {
+    display: inline-block;
+    //margin-bottom: 4px;
+    padding: 6px 0;
+    font-family: $font-family-serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #004086;
+    border-bottom: 1px solid #bce3ff;
+
+    -webkit-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+
+    &:hover {
+      //border-color: #5f7382;
+      //color: #7fb1d6;
+      border-color: #927725;
+      color: #cca430;
+    }
+  }
+
+  .navbar-toggler {
+    border-radius: 0;
+    color: #fff;
+    //background-color: #58532f;
+    background-color: #927725;
+
+    padding: .5rem 2rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    //border-radius: .3rem;
+
+    &:hover, &:focus, &:active {
+      //color: #fff;
+      //background-color: rgba(0,0,0,0.7);
+      //background-color: rgba(88, 83, 47, 0.7);
+      background-color: #b9972e;
+      outline: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  .catalog-books & {
+    @include media-breakpoint-up(lg) {
+      float: left;
+      .card-deck {
+        display: block;
+      }
+    }
+  }
+
+  .card-deck {
+
+    &.wide {
+      margin: 0;
+      flex-basis: 100%;
+      //min-width: 240px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+    }
+
+    .card {
+      position: relative;
+      margin-bottom: 0;
+      list-style: none;
+      padding-left: 0;
+
+      @include media-breakpoint-down(xs) {
+        li {
+          //margin: 0 auto;
+          text-align: center;
+          a {
+            //padding: 12px 0;
+            padding: 0 0 2px 0;
+            margin-bottom: 12px;
+            font-size: 19px;
+          }
+        }
+      }
+
+      @include media-breakpoint-only(sm) {
+        min-width: 210px;
+        a { padding: 10px 0; }
+        &:nth-child(2), &:nth-child(4) {
+          padding-left: 60px !important;
+          li { padding-left: 45px; }
+        }
+        &:nth-child(4) { top: -42px; }
+      }
+
+      @include media-breakpoint-only(md) {
+        &:nth-child(2), &:nth-child(3) { padding-left: 25px !important; }
+      }
+    }
+
+    &.wide {
+      @include media-breakpoint-up(lg) {
+        ul:nth-child(2), ul:nth-child(3) { padding-left: 15px !important; }
+      }
+      @include media-breakpoint-up(xl) {
+        ul:nth-child(2), ul:nth-child(3) { padding-left: 40px !important; }
+      }
+    }
+
+
+    &.collapse {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+
+      &.show {
+        display: flex;
+        @include media-breakpoint-down(xs) {
+          display: block;
+        }
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }
+      }
+    }
+  }
+
+}

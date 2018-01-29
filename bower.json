@@ -1,0 +1,20 @@
+{
+  "name": "diasporiana",
+  "license": "MIT",
+  "description": "Adaptive html template",
+  "authors": [
+    "Yukal Alexander <yukal@email.ua>"
+  ],
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "jquery": "^3.2.1"
+  },
+  "homepage": "https://github.com/yukal/Diasporiana",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
