@@ -14,7 +14,7 @@ gulp.task('webserver', function() {
 
 // Clean build files
 gulp.task('clean', function () {
-  return gulp.src(dest_folder)
+  return gulp.src('build')
     .pipe(plugins.clean());
 });
 

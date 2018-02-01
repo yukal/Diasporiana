@@ -31,7 +31,7 @@ $ gulp js
 # Copy assets into a build
 $ gulp assets
 
-# Clear build directory
+# Removes all of the files from the build directory
 $ gulp clean
 
 # Default task
