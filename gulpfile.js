@@ -51,7 +51,7 @@ gulp.task('coffee', function () {
     .pipe(gulp.dest(dest_folder + '/js'));
 });
 
-gulp.task('img', function () {
+gulp.task('assets', function () {
   return gulp.src(src_folder + '/img/assets/**/*.*')
     .pipe(gulp.dest(dest_folder))
 
@@ -76,7 +76,7 @@ gulp.task('watch', ['webserver'], function () {
 
 // Build
 // gulp.task('build', ['html','sass','js','coffee']);
-gulp.task('build', ['img','html','sass','js']);
+gulp.task('build', ['assets','html','sass','js']);
 
 // Enable default tast
 // gulp.task('default', ['coffee', 'sass']);

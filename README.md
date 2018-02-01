@@ -12,11 +12,27 @@ visit [diasporiana.org.ua](http://diasporiana.org.ua/), [preview](http://wdev.ad
 
     # Install
     $ bash build.sh
-    
+
     # Or manualy:
-    $ bower i && npm i
+    $ npm install
 
 
 ## Build
 
     $ gulp build
+
+    # Build partials
+    $ gulp html
+    $ gulp sass
+    $ gulp js
+
+    # Copies assets files
+    $ gulp assets
+
+    # Clean build dir
+    $ gulp clean
+
+    # To run watcher
+    # (will start "build" command at first)
+    $ gulp
+
