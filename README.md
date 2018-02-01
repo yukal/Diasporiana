@@ -19,20 +19,21 @@ visit [diasporiana.org.ua](http://diasporiana.org.ua/), [preview](http://wdev.ad
 
 ## Build
 
-    $ gulp build
+```bash
+$ gulp build
 
-    # Build partials
-    $ gulp html
-    $ gulp sass
-    $ gulp js
+# Build partials
+$ gulp html
+$ gulp sass
+$ gulp js
 
-    # Copies assets files
-    $ gulp assets
+# Copy assets into a build
+$ gulp assets
 
-    # Clean build dir
-    $ gulp clean
+# Clear build directory
+$ gulp clean
 
-    # To run watcher
-    # (will start "build" command at first)
-    $ gulp
-
+# Default task
+# (will alternately start these tasks: "build", "watch")
+$ gulp
+```
