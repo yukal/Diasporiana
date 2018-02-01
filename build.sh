@@ -1,12 +1,7 @@
 #!/bin/bash
 
 # Gulp
-#npm i --save-dev gulp gulp-load-plugins gulp-rename gulp-rigger gulp-sass gulp-coffee gulp-clean gulp-uglify browser-sync
-
-# Init Bower modules
-if [ ! -d "bower_components" ]; then
-  bower i
-fi
+#npm i --save-dev gulp gulp-load-plugins gulp-rename gulp-rigger gulp-sass gulp-coffee gulp-clean gulp-uglify browser-sync jquery
 
 # Init Node modules
 if [ ! -d "node_modules" ]; then
@@ -20,6 +15,7 @@ if [ -z "${hasGulp// }" ]; then
   sudo npm install gulp -D
 fi
 
+# Alternative
 # Install Gulp
 #if [ ! -d "node_modules/gulp" ]; then
 #  sudo npm install gulp-cli -g

@@ -10,12 +10,13 @@ visit [diasporiana.org.ua](http://diasporiana.org.ua/), [preview](http://wdev.ad
 
 ## Init
 
-    # Install
-    $ bash build.sh
+```bash
+# Install
+$ bash build.sh
 
-    # Or manualy:
-    $ npm install
-
+# Or manualy:
+$ npm install
+```
 
 ## Build
 
