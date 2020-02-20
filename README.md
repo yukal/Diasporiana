@@ -1,20 +1,12 @@
-# Diasporiana
-Adaptive html template (based on [Bootstrap 4 alpha](https://v4-alpha.getbootstrap.com/getting-started/introduction/))
+# Diasporiana HTML template
+This Html template was developed for the [Diasporiana](http://diasporiana.org.ua/) project but still not used.
+The template is based on [Bootstrap 4 alpha](https://v4-alpha.getbootstrap.com/getting-started/introduction/), [scss](https://sass-lang.com/), [Gulp](https://gulpjs.com/)
 
-
-This is the charity project of Ukrainian Internet Library.
-The project of preserving the [intellectual heritage of Ukrainian immigration](http://diasporiana.org.ua/pro-proekt/).
-
-
-visit [diasporiana.org.ua](http://diasporiana.org.ua/), [preview](http://wdev.adr.com.ua/)
+Please visit a [preview page](http://diasporiana.epizy.com/) of the template.
 
 ## Init
 
 ```bash
-# Install
-$ bash build.sh
-
-# Or manualy:
 $ npm install
 ```
 
