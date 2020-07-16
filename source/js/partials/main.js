@@ -1,22 +1,19 @@
-$(document).ready(function() {
+(function onload() {
+    'use strict';
 
-    var searchFocus = function (e) {
-            // var $btn = $(e.target.parentNode).find('button');
-            // $btn.addClass('focus');
-            // console.log(e.target.parentNode);
-            $(e.target.parentNode).addClass('active');
-        },
-        searchBlur = function (e) {
-            // var $btn = $(e.target.parentNode).find('button');
-            // $btn.removeClass('focus');
-            // console.log(e.target.parentNode);
-            $(e.target.parentNode).removeClass('active');
-        };
+    function searchFocus(ev) {
+        ev.currentTarget.parentNode.classList.add('active');
+    }
 
-    // $('#formGroupSearchInput').trigger('focus').parent().addClass('active');
+    function searchBlur(ev) {
+        ev.currentTarget.parentNode.classList.remove('active');
+    };
 
-    $('#formGroupSearchInput')
-        .focus(searchFocus)
-        .blur(searchBlur)
+    const input = document.querySelector('#formGroupSearchInput');
+    input.addEventListener('focus', searchFocus);
+    input.addEventListener('blur', searchBlur);
 
-});
+})
+// To use a non-global context should call a new object, but not a null value. 
+// A null value is discarded and it returns a global object instead
+.call({});
