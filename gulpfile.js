@@ -1,84 +1,84 @@
 // Initialize plugins
-var gulp = require('gulp'),
-    browserSync = require('browser-sync').create(),
-    plugins = require('gulp-load-plugins')();
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const plugins = require('gulp-load-plugins')();
 
 // Initialize folders path
-var src_folder = './source',
-    dest_folder = './build/assets';
+const paths = {
+    css: {
+        src: 'source/scss/**/*.scss',
+        dest: 'build/assets/css'
+    },
+    js: {
+        src: 'source/js/**/*.js',
+        dest: 'build/assets/js'
+    },
+    html: {
+        src: 'source/html/*.html',
+        dest: 'build'
+    }
+};
 
 
-gulp.task('webserver', function() {
-    browserSync.init({server: {baseDir: './build'}});
-});
+function clean() {
+    return gulp.src(paths.html.dest)
+        .pipe(plugins.clean())
+    ;
+}
 
-// Clean build files
-gulp.task('clean', function () {
-  return gulp.src('build')
-    .pipe(plugins.clean());
-});
-
-// Compile HTML
-gulp.task('html', function () {
-    return gulp.src(src_folder + '/html/*.html')
+function html() {
+    return gulp.src(paths.html.src)
         .pipe(plugins.rigger())
-        .pipe(gulp.dest('build'));
-});
+        .pipe(gulp.dest(paths.html.dest))
+        .pipe(browserSync.stream())
+    ;
+}
 
-// Compile SASS to CSS
-gulp.task('sass', function () {
-    return gulp.src(src_folder + '/scss/**/*.scss')
-        .pipe(plugins.sass({outputStyle: 'compressed'}).on('error', plugins.sass.logError))
-        // .pipe(plugins.sass().on('error', plugins.sass.logError))
+function css() {
+    return gulp.src(paths.css.src)
+        .pipe(plugins.rigger())
+        .pipe(plugins.sass({outputStyle: 'expanded'}).on('error', plugins.sass.logError))
+        // .pipe(plugins.sass({outputStyle: 'compressed'}).on('error', plugins.sass.logError))
         .pipe(plugins.rename({suffix: '.min'}))
-        .pipe(gulp.dest(dest_folder + '/css'));
-});
+        .pipe(gulp.dest(paths.css.dest))
+        .pipe(browserSync.stream())
+    ;
+}
 
-gulp.task('js', function() {
-    // Build Template
-    return gulp.src(src_folder + '/js/*.js')
+function js() {
+    return gulp.src(paths.js.src, { sourcemaps: true })
         .pipe(plugins.rigger())
         .pipe(plugins.rename({suffix: '.min'}))
-        .pipe(gulp.dest(dest_folder + '/js'));
-});
+        .pipe(gulp.dest(paths.js.dest))
+        .pipe(browserSync.stream())
+    ;
+}
 
-// Compile CoffeeScript to JS
-gulp.task('coffee', function () {
-  return gulp.src(src_folder + '/coffee/**/*.coffee')
-    .pipe(plugins.coffee({bare: true}))
-    .pipe(plugins.uglify())
-    .pipe(plugins.rename({suffix: '.min'}))
-    .pipe(gulp.dest(dest_folder + '/js'));
-});
+function assets() {
+    return gulp.src('./source/img/assets/**').pipe(gulp.dest('./build/assets'))
+        && gulp.src('./source/img/media/**').pipe(gulp.dest('./build/assets/img'))
+    ;
+}
 
-gulp.task('assets', function () {
-  return gulp.src(src_folder + '/img/assets/**/*.*')
-    .pipe(gulp.dest(dest_folder))
+function watch() {
+    browserSync.init({
+        server: {
+            baseDir: './build'
+        }
+    });
 
-  && gulp.src(src_folder + '/img/media/**/*.*')
-    .pipe(gulp.dest(dest_folder + '/img'));
-});
+    gulp.watch(paths.js.src, js).on('change', browserSync.reload);
+    gulp.watch(paths.css.src, css).on('change', browserSync.reload);
+    gulp.watch(paths.html.src, html).on('change', browserSync.reload);
+}
 
-// Enable watching task
-gulp.task('watch', ['webserver'], function () {
-    // gulp.watch(src_folder + '/coffee/**/*.coffee', ['coffee'])
-    //     .on('change', browserSync.reload);
+const build = gulp.series(assets, gulp.parallel(html, css, js));
 
-    gulp.watch(src_folder + '/js/**/*.js', ['js'])
-        .on('change', browserSync.reload);
-
-    gulp.watch(src_folder + '/html/**/*.html', ['html'])
-        .on('change', browserSync.reload);
-
-    gulp.watch(src_folder + '/scss/**/*.scss', ['sass'])
-        .on('change', browserSync.reload);
-});
-
-// Build
-// gulp.task('build', ['html','sass','js','coffee']);
-gulp.task('build', ['assets','html','sass','js']);
-
-// Enable default tast
-// gulp.task('default', ['coffee', 'sass']);
-// gulp.task('default', ['clean','build','webserver','watch']);
-gulp.task('default', ['build','watch']);
+exports.clean = clean;
+exports.assets = assets;
+exports.html = html;
+exports.css = css;
+exports.js = js;
+exports.build = build;
+exports.watch = watch;
+exports.default = watch;
