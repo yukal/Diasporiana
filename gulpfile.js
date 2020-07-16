@@ -6,11 +6,11 @@ const plugins = require('gulp-load-plugins')();
 // Initialize folders path
 const paths = {
     css: {
-        src: 'source/scss/**/*.scss',
+        src: 'source/scss/*.scss',
         dest: 'build/assets/css'
     },
     js: {
-        src: 'source/js/**/*.js',
+        src: 'source/js/*.js',
         dest: 'build/assets/js'
     },
     html: {
@@ -67,9 +67,13 @@ function watch() {
         }
     });
 
-    gulp.watch(paths.js.src, js).on('change', browserSync.reload);
-    gulp.watch(paths.css.src, css).on('change', browserSync.reload);
-    gulp.watch(paths.html.src, html).on('change', browserSync.reload);
+    const srcJS = paths.js.src.replace('/*.js', '/**/*.js');
+    const srcCSS = paths.css.src.replace('/*.scss', '/**/*.scss');
+    const srcHTML = paths.html.src.replace('/*.html', '/**/*.html');
+
+    gulp.watch(srcJS, js).on('change', browserSync.reload);
+    gulp.watch(srcCSS, css).on('change', browserSync.reload);
+    gulp.watch(srcHTML, html).on('change', browserSync.reload);
 }
 
 const build = gulp.series(assets, gulp.parallel(html, css, js));
