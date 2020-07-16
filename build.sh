@@ -1,25 +1,23 @@
-#!/bin/bash
+#!/usr/bin/bash
 
-# Gulp
-#npm i --save-dev gulp gulp-load-plugins gulp-rename gulp-rigger gulp-sass gulp-coffee gulp-clean gulp-uglify browser-sync jquery
+function IS_ABSENT {
+  return `which "$1" 2>/dev/null | grep -cm1 "$1"`
+}
+
+if IS_ABSENT 'gulp'; then
+  npm install --global gulp-cli
+fi
 
 # Init Node modules
 if [ ! -d "node_modules" ]; then
-  npm i
+  npm install
+
+  # install dependencies
+  # npm install --save-dev browser-sync jquery
+
+  # install gulp dependencies
+  # gulp gulp-load-plugins gulp-rename gulp-rigger gulp-sass gulp-coffee gulp-clean gulp-uglify
 fi
 
-# Install Gulp
-hasGulp=$(which gulp)
-if [ -z "${hasGulp// }" ]; then
-  sudo npm install gulp-cli -g
-  sudo npm install gulp -D
-fi
-
-# Alternative
-# Install Gulp
-#if [ ! -d "node_modules/gulp" ]; then
-#  sudo npm install gulp-cli -g
-#  sudo npm install gulp -D
-#fi
-
+# Run command to build project
 gulp build
