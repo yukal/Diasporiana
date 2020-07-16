@@ -1,0 +1,44 @@
+/* [lg] min-width 992 */
+
+@include media-breakpoint-up(lg) {
+    .catalog-books {
+        .card-columns.wide {
+            column-count: 6;
+            column-gap: 1.5rem;
+
+            .card {
+                min-height: 340px;
+            }
+        }
+    }
+
+    .catalog-books nav.navbar.genres {
+        float: left;
+        .card-deck {
+            display: block;
+        }
+    }
+
+    nav.navbar.genres {
+        float: left;
+        padding-right: 15px;
+        width: 25%;
+
+        .navbar-toggler {
+            display: none;
+        }
+
+        .card-deck {
+            &.wide {
+                ul:nth-child(2),
+                ul:nth-child(3) {
+                    padding-left: 15px !important;
+                }
+            }
+
+            &.collapse.show {
+                display: block;
+            }
+        }
+    }
+}

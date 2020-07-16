@@ -1,0 +1,21 @@
+/* [xl] min-width 1200 */
+
+@include media-breakpoint-up(xl) {
+    .catalog-books {
+        .card-columns {
+            column-gap: 1.4rem;
+            .card {
+                min-height: 370px;
+            }
+        }
+    }
+
+    nav.navbar.genres {
+        .card-deck.wide {
+            ul:nth-child(2),
+            ul:nth-child(3) {
+                padding-left: 40px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+/* [md] min-width 768 */
+
+@include media-breakpoint-up(md) {
+    .catalog-books {
+        .card-columns {
+            column-count: 4;
+            column-gap: 1.2rem;
+        }
+    }
+
+    footer.footer .navbar {
+        justify-content: space-between;
+    }
+}

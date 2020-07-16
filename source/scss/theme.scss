@@ -29,3 +29,11 @@
 
 /* FOOTER */
 @import "partials/custom/footer";
+
+/* MEDIA QUERIES */
+@import "partials/custom/media-queries/misc";
+@import "partials/custom/media-queries/max-width-767";
+@import "partials/custom/media-queries/min-width-576";
+@import "partials/custom/media-queries/min-width-768";
+@import "partials/custom/media-queries/min-width-992";
+@import "partials/custom/media-queries/min-width-1200";

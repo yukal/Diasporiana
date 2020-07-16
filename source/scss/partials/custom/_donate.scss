@@ -1,28 +1,27 @@
 .donate {
-  padding: 2.5rem;
-  text-align: center;
-  //background-color: seashell;
-  //background-color: #fff6b7;
-  border: 15px solid #fff6b7;
+    padding: 2.5rem;
+    text-align: center;
+    border: 15px solid #fff6b7;
 
-  h3 {
-    font-family: $font-family-serif;
-    font-weight: bold;
-  }
-  h4 {}
-  strong {}
-  p {
-    margin: 0;
-  }
-  .row {
-    padding: 40px 0;
-  }
-  .lead {
-    //margin-top: 15px;
-    color: #9c7a1a;
-  }
-  .donate-number {
-    font-size: 1.5rem;
-    word-spacing: 8px;
-  }
+    h3 {
+        font-family: $font-family-serif;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .row {
+        padding: 40px 0;
+    }
+
+    .lead {
+        color: #9c7a1a;
+    }
+
+    .donate-number {
+        font-size: 1.5rem;
+        word-spacing: 8px;
+    }
 }

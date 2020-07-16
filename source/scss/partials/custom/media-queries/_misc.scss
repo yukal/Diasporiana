@@ -1,0 +1,203 @@
+/* [*] misc */
+
+@mixin word_breaker($size) {
+    .ndash.#{$size}::before,
+    .mdash.#{$size}::before {
+        display: inline-block;
+        padding-left: 5px;
+        word-break: break-all;
+    }
+
+    .ndash.#{$size}::before {
+        content: "\2013";
+    }
+    .mdash.#{$size}::before {
+        content: "\2014";
+    }
+}
+
+@media (max-width: 330px) {
+    .catalog-books {
+        .card-columns {
+            column-count: 1;
+            &.wide {
+                column-count: 1;
+            }
+        }
+    }
+}
+
+@media (min-width: 331px) {
+    .catalog-books {
+        .card-columns {
+            column-count: 2;
+            column-gap: 1.4rem;
+
+            &.wide {
+                column-count: 2;
+                column-gap: 1.4rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 404px) {
+    footer.footer dl {
+        padding-left: 0;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    nav.navbar.genres {
+        .card-deck .card li {
+            text-align: center;
+            a {
+                padding: 0 0 2px 0;
+                margin-bottom: 12px;
+                font-size: 19px;
+            }
+        }
+        .card-deck.collapse.show {
+            display: block;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    @include word_breaker(sm);
+
+    .wrap {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    nav.navbar {
+        .container {
+            display: block;
+        }
+    }
+    .navbar-brand {
+        @include clearfix;
+        display: block;
+    }
+    .navbar-nav.mr-auto {
+        display: none;
+    }
+
+    .navbar {
+        &-main {
+            padding: 2rem 0 0;
+            .navbar-collapse {
+                &.show {
+                    width: 100%;
+                }
+                .navbar-nav {
+                    margin: 20px 0;
+                    .nav-link {
+                        font-size: 21px;
+                    }
+                }
+            }
+
+            .navbar-brand {
+                a {
+                    color: #444026;
+                }
+            }
+        }
+
+        &-brand {
+            margin: 0;
+            padding: 0;
+
+            strong {
+                margin-top: 4px;
+                span {
+                    font-size: 16px;
+                    color: #2b2000;
+                }
+            }
+        }
+
+        .navbar-toggler {
+            margin-top: 30px;
+        }
+
+        .container {
+            text-align: center;
+        }
+    }
+}
+
+@include media-breakpoint-only(sm) {
+    nav.navbar.genres {
+        .card-deck .card {
+            min-width: 210px;
+            a {
+                padding: 10px 0;
+            }
+            &:nth-child(2),
+            &:nth-child(4) {
+                padding-left: 60px !important;
+                li {
+                    padding-left: 45px;
+                }
+            }
+            &:nth-child(4) {
+                top: -42px;
+            }
+        }
+    }
+
+    .catalog-books {
+        .card-columns.wide {
+            column-count: 3;
+            column-gap: 1.2rem;
+        }
+    }
+}
+
+@include media-breakpoint-only(md) {
+    nav.navbar.genres {
+        .card-deck .card {
+            &:nth-child(2),
+            &:nth-child(3) {
+                padding-left: 25px !important;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-only(lg) {
+    .catalog-books {
+        .card-columns.wide {
+            column-count: 4;
+            column-gap: 2rem;
+            .card {
+                min-height: 400px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    @include word_breaker(md);
+
+    nav.navbar.genres {
+        .card-deck {
+            margin-top: 30px;
+        }
+
+        .card-deck.collapse {
+            display: none;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    @include word_breaker(lg);
+}
+
+@include media-breakpoint-down(xl) {
+    @include word_breaker(xl);
+}

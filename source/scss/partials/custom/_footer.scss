@@ -1,149 +1,81 @@
 footer.footer {
-  margin-top: 60px;
-  padding: 60px 0;
-  background-color: #252318;
-  //color: #6a6544;
-  color: #807952;
-  font-size: 14px;
+    margin-top: 60px;
+    padding: 60px 0;
+    background-color: #252318;
+    color: #807952;
+    font-size: 14px;
 
-  .navbar {
-    .navbar-brand {
-      a {
-        font-size: 24px;
-        //color: #e4dda8;
-        //color: #c5be8d;
-        //color: #fbfbfb;
-        //color: #cac7a4;
-        color: #e4e2cb;
-      }
-      strong span {
-        //color: #6a6544;
-        color: #807952;
-      }
-    }
+    .navbar {
+        .navbar-brand {
+            a {
+                font-size: 24px;
+                color: #e4e2cb;
+            }
+            strong span {
+                color: #807952;
+            }
+        }
 
-    .nav-link {
-      border-color: #2f2c1a;
-      color: #6a6544;
+        .nav-link {
+            border-color: #2f2c1a;
+            color: #6a6544;
 
-      &:hover {
-        border-color: #6f6846;
-        color: #dccc9c;
-      }
-    }
-
-    @include media-breakpoint-up(md) {
-      justify-content: space-between;
-    }
-  }
-
-  .indent {
-    padding-left: 100px;
-    //@media (max-width: 404px) {
-    //  padding-left: 0;
-    //}
-  }
-
-  dl {
-    margin-top: 10px;
-    a {
-      color: #927725;
-    }
-    dd {
-      margin-bottom: 0;
-    }
-  }
-
-  .info {
-    text-align: right;
-    word-spacing: 4px;
-  }
-
-  @include media-breakpoint-down(sm) {
-    .container, .info {
-      text-align: center;
-    }
-
-    nav.navbar {
-      padding: 0;
-      flex-direction: column-reverse;
-      align-items: baseline;
-      text-align: center;
-      flex-basis: 100%;
+            &:hover {
+                border-color: #6f6846;
+                color: #dccc9c;
+            }
+        }
     }
 
     .indent {
-      padding-left: 0;
-      //text-align: center;
+        padding-left: 100px;
     }
 
-    .navbar-brand {
-      margin-top: 2rem;
-      width: 100%;
-    }
-
-    .navbar-nav {
-      padding-bottom: 30px;
-      display: block;
-      width: 100%;
-    }
-
-    .navbar-main .navbar-nav .nav-link {
-      font-size: 21px;
-    }
-  }
-
-  @media (max-width: 404px) {
     dl {
-      padding-left: 0;
-    }
-  }
-
-  .developedby {
-    a {
-      display: inline-block;
-      //padding: 6px 12px 6px 35px;
-      padding: 8px 12px 8px 0;
-      text-align: left;
-      @include media-breakpoint-down(sm) {
-        padding: 8px 12px;
-        text-align: center;
-      }
-      min-width: 152px;
-      text-decoration: none;
-      //color: #4a462e;
-      color: #5f593c;
-
-      //background-image: url('../kbd/kbd_02.svg');
-      //background-image: url('../kbd.svg');
-      background-repeat: no-repeat;
-      background-position: left 0;
-      background-size: 32px;
-
-      -webkit-transition: all .2s ease-in-out;
-      -o-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
-
-      &::before {
-        content: 'Developed by';
-        display: block;
-      }
-
-      &:hover {
-        //background-color: black;
-        background-color: seagreen;
-        color: #fff;
-        text-align: center;
-        @include media-breakpoint-up(sm) {
-          padding: 8px 12px;
-          text-align: center;
+        margin-top: 10px;
+        a {
+            color: #927725;
         }
-        &::before {
-          content: 'Yukal Alexander';
+        dd {
+            margin-bottom: 0;
         }
-      }
     }
 
-  }
+    .info {
+        text-align: right;
+        word-spacing: 4px;
+    }
 
+    .developedby {
+        a {
+            display: inline-block;
+            padding: 8px 12px 8px 0;
+            text-align: left;
+            min-width: 152px;
+            text-decoration: none;
+            color: #5f593c;
+
+            background-repeat: no-repeat;
+            background-position: left 0;
+            background-size: 32px;
+
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+
+            &::before {
+                content: "Developed by";
+                display: block;
+            }
+
+            &:hover {
+                background-color: seagreen;
+                color: #fff;
+                text-align: center;
+                &::before {
+                    content: "Alexander Yukal";
+                }
+            }
+        }
+    }
 }

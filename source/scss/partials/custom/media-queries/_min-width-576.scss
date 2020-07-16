@@ -1,0 +1,22 @@
+/* [sm] min-width 576 */
+
+@include media-breakpoint-up(sm) {
+    body {
+        padding-top: 40px;
+    }
+
+    .wrap {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .container.presentation .lead {
+        font-size: 28px;
+    }
+
+    .catalog-books {
+        .card-columns {
+            column-count: 2;
+        }
+    }
+}

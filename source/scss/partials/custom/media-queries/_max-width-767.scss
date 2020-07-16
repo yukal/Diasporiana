@@ -1,0 +1,44 @@
+/* [sm] max-width 767 */
+
+@include media-breakpoint-down(sm) {
+    footer.footer {
+        .container,
+        .info {
+            text-align: center;
+        }
+
+        .indent {
+            padding-left: 0;
+        }
+
+        .developedby a {
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        nav.navbar {
+            padding: 0;
+            flex-direction: column-reverse;
+            align-items: baseline;
+            text-align: center;
+            flex-basis: 100%;
+        }
+
+        .navbar {
+            &-brand {
+                margin-top: 2rem;
+                width: 100%;
+            }
+
+            &-nav {
+                padding-bottom: 30px;
+                display: block;
+                width: 100%;
+            }
+
+            &-main .navbar-nav .nav-link {
+                font-size: 21px;
+            }
+        }
+    }
+}
