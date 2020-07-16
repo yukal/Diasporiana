@@ -1,11 +1,10 @@
 {
   "name": "diasporiana",
+  "description": "Adaptive html template for Diasporiana project",
+  "author": "Alexander Yukal <yukal@email.ua>",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "Yukal Alexander <yukal@email.ua>",
-  "description": "Adaptive html template",
   "main": "gulpfile.js",
-  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
@@ -18,13 +17,13 @@
     "gulp-uglify": "^2.1.2",
     "jquery": "^3.3.1"
   },
-  "homepage": "https://github.com/yukal/Diasporiana#readme",
+  "homepage": "https://github.com/yukal/html-template-Diasporiana/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yukal/Diasporiana.git"
+    "url": "git+https://github.com/yukal/html-template-Diasporiana"
   },
   "bugs": {
-    "url": "https://github.com/yukal/Diasporiana/issues"
+    "url": "https://github.com/yukal/html-template-Diasporiana/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
