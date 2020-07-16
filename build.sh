@@ -16,7 +16,7 @@ if [ ! -d "node_modules" ]; then
   # npm install --save-dev browser-sync jquery
 
   # install gulp dependencies
-  # gulp gulp-load-plugins gulp-rename gulp-rigger gulp-sass gulp-coffee gulp-clean gulp-uglify
+  # npm install --save-dev gulp gulp-load-plugins gulp-pug gulp-rename gulp-rigger gulp-sass gulp-coffee gulp-clean gulp-uglify
 fi
 
 # Run command to build project

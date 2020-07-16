@@ -1,0 +1,21 @@
+section.container.wrap.catalog-books
+
+    nav.navbar.wrap.genres
+        button.btn.btn-block.navbar-toggler(
+            type='button' 
+            data-toggle='collapse' 
+            data-target='#NavbarGenres1' 
+            aria-controls='NavbarGenres1' 
+            aria-expanded='false' 
+            aria-label='Toggle navigation') Жанри
+
+        // Genres Menu
+        #NavbarGenres1.collapse.navbar-collapse.card-deck
+            include ../lists/genres.pug
+
+    // Catalog Items
+    .card-columns
+        include ../lists/catalog_all.pug
+
+    // Pagination
+    include ../pagination.pug

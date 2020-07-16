@@ -14,7 +14,7 @@ const paths = {
         dest: 'build/assets/js'
     },
     html: {
-        src: 'source/html/*.html',
+        src: 'source/html/*.pug',
         dest: 'build'
     }
 };
@@ -28,7 +28,9 @@ function clean() {
 
 function html() {
     return gulp.src(paths.html.src)
-        .pipe(plugins.rigger())
+        .pipe(plugins.pug({
+            pretty: true
+        }))
         .pipe(gulp.dest(paths.html.dest))
         .pipe(browserSync.stream())
     ;
@@ -69,7 +71,7 @@ function watch() {
 
     const srcJS = paths.js.src.replace('/*.js', '/**/*.js');
     const srcCSS = paths.css.src.replace('/*.scss', '/**/*.scss');
-    const srcHTML = paths.html.src.replace('/*.html', '/**/*.html');
+    const srcHTML = paths.html.src.replace('/*.pug', '/**/*.pug');
 
     gulp.watch(srcJS, js).on('change', browserSync.reload);
     gulp.watch(srcCSS, css).on('change', browserSync.reload);

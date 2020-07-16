@@ -1,0 +1,73 @@
+-
+    var catalog_items = [
+        {
+            href: '#',
+            img: 'book-10.jpg',
+            title: 'The Moscow Games of 1980',
+            info: 'Політологія, 1981 р.'
+        },{
+            href: '#',
+            img: 'book-01.png',
+            title: 'Duel',
+            info: 'Проза, 1986 р.'
+        },{
+            href: '#',
+            img: 'book-02.png',
+            title: 'Vita Nova',
+            info: 'Проза, 1957 р.'
+        },{
+            href: '#',
+            img: 'book-03.png',
+            title: 'В обіймах Мельпомени',
+            info: 'Проза, 1954 р.'
+        },{
+            href: '#',
+            img: 'book-04.jpg',
+            title: 'The Ukrainian Folk Dance',
+            info: 'Фольклор, 1980 р.'
+        },{
+            href: '#',
+            img: 'book-16.png',
+            title: 'У Києві на риночку',
+            info: 'Фольклор, **** р.'
+        },{
+            href: '#',
+            img: 'book-20.jpg',
+            title: 'Молода Україна',
+            info: 'Періодика, 1965 р.'
+        },{
+            href: '#',
+            img: 'book-05.png',
+            title: 'Самостійник',
+            info: 'Проза, 1955 р.'
+        },{
+            href: '#',
+            img: 'book-06.jpg',
+            title: 'Теофанова дочка',
+            info: 'Проза, 1946 р.'
+        },{
+            href: '#',
+            img: 'book-07.jpg',
+            title: 'Любовна історія',
+            info: 'Проза, 1947 р.'
+        },{
+            href: '#',
+            img: 'book-08.jpg',
+            title: 'Старосвітське панство',
+            info: 'Історія, 1999 р.'
+        },{
+            href: '#',
+            img: 'book-15.png',
+            title: 'Luzes na agua',
+            info: 'Проза, 1997 р.'
+        }
+    ];
+
+
+each item in catalog_items
+    .card
+        a(href=item.href)
+            img.card-img-top.img-fluid(src="assets/img/"+item.img)
+        .card-block
+            a.card-title(href=item.href)= item.title
+            p.card-text= item.info

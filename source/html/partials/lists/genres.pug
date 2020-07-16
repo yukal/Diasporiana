@@ -1,0 +1,31 @@
+-
+    var genre_items = [[
+        { href:'#', name: 'Ucrainica' },
+        { href:'#', name: 'Фольклор' },
+        { href:'#', name: 'Дитяча література' },
+        { href:'#', name: 'Літературознавство' },
+        { href:'#', name: 'Мовознавство' }
+    ],[
+        { href:'#', name: 'Історія' },
+        { href:'#', name: 'Періодика' },
+        { href:'#', name: 'Політологія' },
+        { href:'#', name: 'Ідеологія' }
+    ],[
+        { href:'#', name: 'Мемуари' },
+        { href:'#', name: 'Поезія' },
+        { href:'#', name: 'Проза' },
+        { href:'#', name: 'Драма' }
+    ],[
+        { href:'#', name: 'Релігія' },
+        { href:'#', name: 'Мистецтво' },
+        { href:'#', name: 'Словники' },
+        { href:'#', name: 'Довідники' },
+        { href:'#', name: 'Різне' }
+    ]];
+
+
+each items in genre_items
+    ul.card
+        each item in items
+            li
+                a(href=item.href)= item.name

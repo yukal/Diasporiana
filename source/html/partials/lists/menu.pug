@@ -1,0 +1,33 @@
+-
+    var menu_items = [
+        {
+            name: 'Каталог',
+            href: 'catalog.html',
+            active: true,
+        },{
+            name: 'Про нас',
+            href: 'about.html',
+            active: false,
+        },{
+            name: 'Пожертва',
+            href: '#donate',
+            active: false,
+        },{
+            name: 'Контакти',
+            href: '#contacts',
+            active: false,
+        },{
+            name: 'RSS',
+            href: 'http://diasporiana.org.ua/feed/',
+            active: false,
+        },
+    ];
+
+
+each item in menu_items
+    if item.active
+        li.nav-item.active
+            a.nav-link(href=item.href)= item.name
+    else
+        li.nav-item
+            a.nav-link(href=item.href)= item.name

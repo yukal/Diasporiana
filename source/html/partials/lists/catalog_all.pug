@@ -1,0 +1,113 @@
+-
+    var catalog_items = [
+        {
+            title: 'Duel',
+            info: 'Проза, 1986 р.',
+            img: 'book-01.png',
+            href:'#',
+        },{
+            title: 'Vita Nova',
+            info: 'Проза, 1957 р.',
+            img: 'book-02.png',
+            href:'#',
+        },{
+            title: 'В обіймах Мельпомени',
+            info: 'Проза, 1954 р.',
+            img: 'book-03.png',
+            href:'#',
+        },{
+            title: 'The Ukrainian Folk Dance',
+            info: 'Фольклор, 1980 р.',
+            img: 'book-04.jpg',
+            href:'#',
+        },{
+            title: 'Самостійник',
+            info: 'Проза, 1955 р.',
+            img: 'book-05.png',
+            href:'#',
+        },{
+            title: 'Теофанова дочка',
+            info: 'Проза, 1946 р.',
+            img: 'book-06.jpg',
+            href:'#',
+        },{
+            title: 'Любовна історія',
+            info: 'Проза, 1947 р.',
+            img: 'book-07.jpg',
+            href:'#',
+        },{
+            title: 'Старосвітське панство',
+            info: 'Історія, 1999 р.',
+            img: 'book-08.jpg',
+            href:'#',
+        },{
+            title: 'Ягілки',
+            info: 'Фольклор, 1969 р.',
+            img: 'book-09.png',
+            href:'#',
+        },{
+            title: 'The Moscow Games of 1980',
+            info: 'Політологія, 1981 р.',
+            img: 'book-10.jpg',
+            href:'#',
+        },{
+            title: 'Дочка Монтезуми',
+            info: 'Проза, 1953 р.',
+            img: 'book-11.png',
+            href:'#',
+        },{
+            title: 'The Soviet Buroecratic Elite',
+            info: 'Політологія, 1959 р.',
+            img: 'book-12.png',
+            href:'#',
+        },{
+            title: 'Всесвітна війна близько',
+            info: 'Релігія, 1935 р.',
+            img: 'book-13.png',
+            href:'#',
+        },{
+            title: 'Літопис УПА',
+            info: 'Довідники, \'73-2012 р.',
+            img: 'book-14.png',
+            href:'#',
+        },{
+            title: 'Luzes na gua',
+            info: 'Проза, 1997 р.',
+            img: 'book-15.png',
+            href:'#',
+        },{
+            title: 'У Києві на риночку',
+            info: 'Фольклор, **** р.',
+            img: 'book-16.png',
+            href:'#',
+        },{
+            title: 'Словник синонімів української мови',
+            info: 'Довідники, 1975 р.',
+            img: 'book-17.png',
+            href:'#',
+        },{
+            title: 'Маковей Осип Ярошенко',
+            info: 'Проза, 1962 р.',
+            img: 'book-18.png',
+            href:'#',
+        },{
+            title: 'Івасик-телесик',
+            info: 'Дитяча літ-ра, 1925 р.',
+            img: 'book-19.png',
+            href:'#',
+        },{
+            title: 'Молода Україна',
+            info: 'Періодика, 1965 р.',
+            img: 'book-20.jpg',
+            href:'#',
+        }
+    ];
+
+
+each item in catalog_items
+    .card
+        a(href=item.href)
+            img.card-img-top.img-fluid(src="assets/img/"+item.img)
+        .card-block
+            a.card-title(href=item.href)= item.title
+            span.card-text= item.info
