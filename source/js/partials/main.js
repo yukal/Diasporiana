@@ -10,8 +10,10 @@
     };
 
     const input = document.querySelector('#formGroupSearchInput');
-    input.addEventListener('focus', searchFocus);
-    input.addEventListener('blur', searchBlur);
+    if (input !== null) {
+        input.addEventListener('focus', searchFocus);
+        input.addEventListener('blur', searchBlur);
+    }
 
 })
 // To use a non-global context should call a new object, but not a null value. 
