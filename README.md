@@ -1,5 +1,5 @@
 # Diasporiana HTML template
-This Html template and [the logotype](https://raw.githubusercontent.com/yukal/html-template-Diasporiana/master/source/img/assets/logo.svg) was developed for the [Diasporiana](http://diasporiana.org.ua/) project but still not used.
+This Html template and [the logotype](https://raw.githubusercontent.com/yukal/template-diasporiana/master/source/img/assets/logo.svg) was developed for the [Diasporiana](http://diasporiana.org.ua/) project but still not used.
 The template is based on [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5), [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3), [SCSS](https://sass-lang.com/), [Bootstrap 4 alpha](https://v4-alpha.getbootstrap.com/getting-started/introduction/), [pug](https://pugjs.org/), and [Gulp](https://gulpjs.com/) usage as streaming build system on Node.js
 
 Please visit a [preview page](http://diasporiana.epizy.com/) of the template.

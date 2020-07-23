@@ -18,13 +18,13 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.1"
   },
-  "homepage": "https://github.com/yukal/html-template-Diasporiana/blob/master/README.md",
+  "homepage": "https://github.com/yukal/template-diasporiana/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yukal/html-template-Diasporiana"
+    "url": "git+https://github.com/yukal/template-diasporiana"
   },
   "bugs": {
-    "url": "https://github.com/yukal/html-template-Diasporiana/issues"
+    "url": "https://github.com/yukal/template-diasporiana/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
